@@ -7,9 +7,9 @@ app = Flask(__name__)
 
 true_dataset_path = 'True.csv'
 df_true = pd.read_csv(true_dataset_path)
-fake_dataset_path = 'Fake.csv'
-df_fake = pd.read_csv(fake_dataset_path)
-df = pd.concat([df_true, df_fake], ignore_index=True)
+n1_dataset_path = 'n1.csv'
+df_n1 = pd.read_csv(n1_dataset_path)
+df = pd.concat([df_true, df_n1], ignore_index=True)
 
 vectorizer = TfidfVectorizer()
 text_vectors = vectorizer.fit_transform(df['text'])
